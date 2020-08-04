@@ -7,7 +7,7 @@ import React from 'react';
 // import Contact from './Contact'
 // import Footer from './Footer'
 // Styles
-// import { GlobalStyles } from '../styles/GlobalStyles'
+import { GlobalStyles } from '../styles/GlobalStyles'
 
 function App() {
   return (
