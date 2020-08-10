@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Components
-// import Header from './Header'
+import Header from './Header'
 // import Intro from './Intro'
 // import Portfolio from './Portfolio'
 // import Contact from './Contact'
@@ -12,13 +12,12 @@ import { GlobalStyles } from '../styles/GlobalStyles'
 function App() {
   return (
     <div>
-      HI THERE
-      {/* <GlobalStyles />
+      <GlobalStyles />
       <Header />
-      <Intro />
+      {/* <Intro />
       <Portfolio />
       <Contact />
-      <Footer /> */}
+      <Footer />  */}
     </div>
   );
 }
