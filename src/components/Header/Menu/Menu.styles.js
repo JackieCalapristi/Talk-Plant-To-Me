@@ -9,8 +9,8 @@ export const Nav = styled.ul`
 
   a {
     text-decoration: none;
-    font-size: 25px;
-    color: #FFFFFF;
+    font-size: 15px;
+    color: black;
   }
 
   li {

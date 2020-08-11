@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 // Components
 import Menu from "./Menu"
-// import Hamburger from "./Hamburger"
-// import MobileMenu from "./MobileMenu"
+import Hamburger from "./Hamburger"
+import MobileMenu from "./MobileMenu"
 // import Welcome from "./Welcome"
 
 // Styles
@@ -18,13 +18,10 @@ const Header = ({ siteTitle = ``}) => {
   return (
     <Wrapper>
       <MenuWrapper>
-        {/* <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} items={menuItems} /> */}
+        <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} items={menuItems} /> 
         <Menu items={menuItems} /> 
-        Plantspeak 🌱
-        Talk plants to me 🌱
-        Plantucation 🌱
-        Plantopia 🌱
+        Talk plants to me 🌱   
       </MenuWrapper>
       {/* <Welcome /> */}
     </Wrapper>
