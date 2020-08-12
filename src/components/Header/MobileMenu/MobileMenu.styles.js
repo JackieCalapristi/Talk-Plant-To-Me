@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   left: ${props => props.menuOpen ? "0px" : "-320px"};
   width: 320px;
   height: 100%;
-  background: #000;
+  background: #FFF;
   top: 0px;
   padding: 0 0 0 20px;
   transition: all 0.3s ease;
@@ -36,7 +36,7 @@ export const Nav = styled.ul`
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
 
   li {

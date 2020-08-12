@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu"
 // import Welcome from "./Welcome"
 
 // Styles
-import { MenuWrapper, Wrapper } from "./Header.styles"
+import { MenuWrapper, Wrapper, Logo } from "./Header.styles"
 
 const Header = ({ siteTitle = ``}) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Header = ({ siteTitle = ``}) => {
         <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} items={menuItems} /> 
         <Menu items={menuItems} /> 
-        Talk plants to me 🌱   
+        <Logo alt={siteTitle}>Talk Plant To Me</Logo>
       </MenuWrapper>
       {/* <Welcome /> */}
     </Wrapper>

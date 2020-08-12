@@ -20,3 +20,11 @@ export const MenuWrapper = styled.div`
     align-items: center;
   }
 `
+
+export const Logo = styled.div`
+  max-width: 100px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 250px;
+  }
+`
