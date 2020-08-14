@@ -2,6 +2,7 @@ import React from 'react';
 
 //Components
 import Header from './Header'
+import Grid from './Grid';
 // import Intro from './Intro'
 // import Portfolio from './Portfolio'
 // import Contact from './Contact'
@@ -14,6 +15,7 @@ function App() {
     <div>
       <GlobalStyles />
       <Header />
+      <Grid />
       {/* <Intro />
       <Portfolio />
       <Contact />
