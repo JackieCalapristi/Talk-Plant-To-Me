@@ -1,7 +1,7 @@
 import React from "react";
 
-const PlantCard = ({ title  }) => (
-  <div>I'm a plant card for: {title}</div>
+const PlantCard = ({ name  }) => (
+  <div>I'm a plant card for: {name}</div>
 );
 
 export default PlantCard;
