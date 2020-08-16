@@ -28,34 +28,6 @@ export const usePlantsFetch = searchTerm => {
         }
       })).json();
 
-    //   // const url = "https://example.com"; // site that doesn’t send Access-Control-*
-    // fetch(endpoint)
-    // .then(response => response.text())
-    // .then(contents => console.log(contents))
-    // .catch(() => console.log("Can’t access " + endpoint + " response. Blocked by browser?"))
-    // fetch(endpoint, {
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Access-Control-Allow-Origin': 'http://localhost:3000/',
-    //     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-    //   }
-    // })
-    // .then(response => response.json())
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
-
-      // console.log("result", result)
-      // setState(prev => ({
-      //     ...prev,
-      //     plants: [...prev.plants],
-      //         // isLoadMore !== -1
-      //         //     ? [...prev.plants, ...result.results]
-      //         //     : [...result.results],
-      //     // heroImage: prev.heroImage || result.results[0],
-      //     currentPage: result.page,
-      //     totalPages: result.total_pages,
-      // }));
     }
     catch (error) {
         setError(true);
