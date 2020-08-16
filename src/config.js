@@ -4,8 +4,8 @@
 const API_URL = 'https://trefle.io/api/v1/plants';
 const API_KEY = 'V0FEWm1DcEdlTTBFUUZqTkczVEx5UT09';
 
-const SEARCH_BASE_URL = `${API_URL}search?api_key=${API_KEY}&query=`;
-const ALL_PLANTS_BASE_URL = `${API_URL}?api_key=${API_KEY}`;
+const SEARCH_BASE_URL = `${API_URL}/search?token=${API_KEY}&query=`;
+const ALL_PLANTS_BASE_URL = `${API_URL}?token=${API_KEY}`;
 
 export { 
   API_URL, 

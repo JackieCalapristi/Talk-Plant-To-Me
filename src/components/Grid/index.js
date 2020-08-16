@@ -25,58 +25,60 @@ const Grid = ({ children }) => {
   ];
 
   const [searchTerm, setSearchTerm] = useState('');
-    const [
-        {
-            state: { plants, currentPage, totalPages }, 
-            loading, 
-            error
-        }, 
-        fetchPlants
-    ] = usePlantsFetch(searchTerm);
+  const [
+      {
+          state: { plants, currentPage, totalPages }, 
+          loading, 
+          error
+      }, 
+      fetchPlants
+  ] = usePlantsFetch(searchTerm);
 
-    // const searchPlants = search => {
-    //     const endpoint = search 
-    //         ? SEARCH_BASE_URL + search 
-    //         : ALL_PLANTS_BASE_URL;
+  const searchPlants = search => {
+      const endpoint = search 
+          ? SEARCH_BASE_URL + search 
+          : ALL_PLANTS_BASE_URL;
 
-    //     setSearchTerm(search);
-    //     fetchPlants(endpoint);
-    // }
+      setSearchTerm(search);
+      fetchPlants(endpoint);
+  }
 
-    // const loadMorePlants = () => {
-    //     const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${currentPage + 1}`;
-    //     const popularEndpoint = `${ALL_PLANTS_BASE_URL}&page=${currentPage + 1}`;
-    //     const endpoint = searchTerm ? searchEndpoint : popularEndpoint;
+  const loadMorePlants = () => {
+      const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${currentPage + 1}`;
+      const popularEndpoint = `${ALL_PLANTS_BASE_URL}&page=${currentPage + 1}`;
+      const endpoint = searchTerm ? searchEndpoint : popularEndpoint;
 
-    //     fetchPlants(endpoint);
-    // };
+      fetchPlants(endpoint);
+  };
 
-    // if (error) return <div>Something went wrong...</div>
-    // if (!movies[0]) return <Spinner />
+  // if (error) return <div>Something went wrong...</div>
+  // if (!movies[0]) return <Spinner />
 
-    console.log(plants, fetchPlants);
+  console.log(plants, error, loading);
   return (
-  <CardsWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
-    {/* {fakePlants.map(
-      plant => 
-      <CardWrapper key={plant.id} name={plant.name}>{plant.name}</CardWrapper>
-    )} */}
-   
+    <CardsWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
+      {/* {fakePlants.map(
+        plant => 
+        <CardWrapper key={plant.id} name={plant.name}>{plant.name}</CardWrapper>
+      )} */}
+    
 
-    {plants.map(plant => (
-        <CardWrapper
-            key={plant.id}
-            clickable
-            // image={
-            //     movie.poster_path 
-            //         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
-            //         :  NoImage
-            // }
-            // plantId={plant.id}
-            // plantName={plant.original_title}
-        />
-    ))} 
-  </CardsWrapper>
+      {plants.map(plant => {
+        console.log("plants", plant)
+        return (
+          <CardWrapper
+          key={plant.id}
+          clickable
+          // image={
+          //     movie.poster_path 
+          //         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
+          //         :  NoImage
+          // }
+          // plantId={plant.id}
+          // plantName={plant.original_title}
+      />)
+      })} 
+    </CardsWrapper>
   )
 };
 
