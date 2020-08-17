@@ -14,17 +14,10 @@ export const usePlantsFetch = searchTerm => {
     console.log();
 
     try {
-      let headers = new Headers();
-      headers.append('Access-Control-Allow-Origin', 'http://localhost:3000/');
-      // headers.append('Access-Control-Allow-Credentials', 'true');
-      headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-      headers.append('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
       const result = await (await fetch(endpoint, {
+        mode: 'cors',
         headers: {
-          // 'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': 'http://localhost:3000/',
-          // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE'
         }
       })).json();
 
