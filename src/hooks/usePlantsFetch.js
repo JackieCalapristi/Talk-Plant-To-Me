@@ -14,12 +14,20 @@ export const usePlantsFetch = searchTerm => {
     console.log();
 
     try {
-      const result = await (await fetch(endpoint, {
-        mode: 'cors',
-        headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:3000/',
-        }
-      })).json();
+      // const result = await (await fetch(endpoint, {
+      //   mode: 'cors',
+      //   headers: {
+      //     'Access-Control-Allow-Origin': 'http://localhost:3000/',
+      //   }
+      // })).json();
+
+      const fetch = require('node-fetch');
+
+      (async () => {
+        const response = await fetch(endpoint);
+        const json = await response.json();
+        console.log(json);
+      })();
 
     }
     catch (error) {
