@@ -12,37 +12,19 @@ export const usePlantsFetch = searchTerm => {
 
     const isLoadMore = endpoint.search('page');
 
-    const result = fetch('http://cors-anywhere.herokuapp.com/trefle.io/api/v1/plants?token=V0FEWm1DcEdlTTBFUUZqTkczVEx5UT09', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(function(response) { 
-      return response.text(); 
-    }).then(function(data) {
-      console.log('HI', data); 
-    })
-
     try {
-     
-
-
-    //   $.ajax({ 
-    //     type:'get', 
-    //     url:'getPlantData.py', 
-    //     cache:false, 
-    //     async:'asynchronous', 
-    //     dataType:'json', 
-    //     success: function(data) { 
-    //       console.log(JSON.stringify(data)) 
-    //     }, 
-    //     error: function(request, status, error) { 
-    //       console.log("Error: " + error) 
-    //     } 
-    //  });  
-
+      const result = await (await fetch(endpoint)).json();
+      console.log(result.data);
+        setState(prev => ({
+            ...prev,
+            plants: [...prev.plants, ...result.data],
+                // isLoadMore !== -1
+                //     ? [...prev.movies, ...result.results]
+                //     : [...result.results],
+            // heroImage: prev.heroImage || result.results[0],
+            // currentPage: result.page,
+            // totalPages: result.total_pages,
+        }));
     }
     catch (error) {
         setError(true);
@@ -56,7 +38,6 @@ useEffect(() => {
   if (sessionStorage.plantState) {
       setState(JSON.parse(sessionStorage.plantState));
       setLoading(false);
-      console.log("hello", sessionStorage)
   }
   else {
       fetchPlants(ALL_PLANTS_BASE_URL);

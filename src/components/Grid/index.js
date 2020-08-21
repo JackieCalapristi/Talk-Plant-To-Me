@@ -54,7 +54,7 @@ const Grid = ({ children }) => {
   // if (error) return <div>Something went wrong...</div>
   // if (!movies[0]) return <Spinner />
 
-  console.log(plants, error, loading);
+  // console.log(plants, error, loading);
   return (
     <CardsWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
       {/* {fakePlants.map(
@@ -64,19 +64,18 @@ const Grid = ({ children }) => {
     
 
       {plants.map(plant => {
-        console.log("plants", plant)
         return (
           <CardWrapper
-          key={plant.id}
-          clickable
-          // image={
-          //     movie.poster_path 
-          //         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
-          //         :  NoImage
-          // }
-          // plantId={plant.id}
-          // plantName={plant.original_title}
-      />)
+            key={plant.id}
+            clickable
+            // image={
+            //     movie.poster_path 
+            //         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
+            //         :  NoImage
+            // }
+            // plantId={plant.id}
+            // plantName={plant.original_title}
+        />)
       })} 
     </CardsWrapper>
   )
