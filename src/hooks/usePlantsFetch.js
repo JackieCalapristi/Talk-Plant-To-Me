@@ -11,23 +11,36 @@ export const usePlantsFetch = searchTerm => {
     setLoading(true);
 
     const isLoadMore = endpoint.search('page');
-    console.log();
+
+    const result = fetch('/getPlantData.py', {
+      method  : 'GET',
+      headers : {
+          'Content-Type': 'application/json'
+      },
+    })
+    .then(function(response) { 
+      return response.text(); 
+    }).then(function(data) {
+      console.log('HI', data); 
+    })
 
     try {
-      // const result = await (await fetch(endpoint, {
-      //   mode: 'cors',
-      //   headers: {
-      //     'Access-Control-Allow-Origin': 'http://localhost:3000/',
-      //   }
-      // })).json();
+     
 
-      const fetch = require('node-fetch');
 
-      (async () => {
-        const response = await fetch(endpoint);
-        const json = await response.json();
-        console.log(json);
-      })();
+    //   $.ajax({ 
+    //     type:'get', 
+    //     url:'getPlantData.py', 
+    //     cache:false, 
+    //     async:'asynchronous', 
+    //     dataType:'json', 
+    //     success: function(data) { 
+    //       console.log(JSON.stringify(data)) 
+    //     }, 
+    //     error: function(request, status, error) { 
+    //       console.log("Error: " + error) 
+    //     } 
+    //  });  
 
     }
     catch (error) {
