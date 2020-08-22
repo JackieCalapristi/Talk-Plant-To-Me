@@ -12,11 +12,12 @@ export const usePlantsFetch = searchTerm => {
 
     const isLoadMore = endpoint.search('page');
 
-    const result = fetch('/getPlantData.py', {
-      method  : 'GET',
-      headers : {
-          'Content-Type': 'application/json'
-      },
+    const result = fetch('http://cors-anywhere.herokuapp.com/trefle.io/api/v1/plants?token=V0FEWm1DcEdlTTBFUUZqTkczVEx5UT09', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }
     })
     .then(function(response) { 
       return response.text(); 
