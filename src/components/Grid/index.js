@@ -5,7 +5,8 @@ import {
 } from '../../config';
 
 // Styles
-import { CardsWrapper, CardWrapper } from "./Grid.styles"
+import PlantCard from "./PlantCard";
+import { GridWrapper, CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
 // import HeroImage from './elements/HeroImage'
@@ -19,11 +20,6 @@ import { CardsWrapper, CardWrapper } from "./Grid.styles"
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
 
 const Grid = ({ children }) => {
-  const fakePlants = [
-    {id: 1, name: "Rosemary"},
-    {id: 2, name: "Basil"}
-  ];
-
   const [searchTerm, setSearchTerm] = useState('');
   const [
       {
@@ -56,29 +52,22 @@ const Grid = ({ children }) => {
 
   // console.log(plants, error, loading);
   return (
-    <CardsWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
-      {/* {fakePlants.map(
-        plant => 
-        <CardWrapper key={plant.id} name={plant.name}>{plant.name}</CardWrapper>
-      )} */}
-    
+    <GridWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
+      <CardsWrapper>
+        {plants.map(plant => {
+            console.log(plant)
 
-      {plants.map(plant => {
-        console.log(plant)
-        return (
-          <CardWrapper
-            key={plant.id}
-            clickable
-            // image={
-            //     movie.poster_path 
-            //         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
-            //         :  NoImage
-            // }
-            // plantId={plant.id}
-            // plantName={plant.original_title}
-        >{plant.common_name}</CardWrapper>)
-      })} 
-    </CardsWrapper>
+            return (
+              <PlantCard
+                key={plant.id}
+                clickable
+                image={plant.image_url}
+                name={plant.common_name}
+                // plantId={plant.id}
+              />)
+          })} 
+        </CardsWrapper>
+    </GridWrapper>
   )
 };
 
