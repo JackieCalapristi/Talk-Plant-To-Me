@@ -64,6 +64,7 @@ const Grid = ({ children }) => {
     
 
       {plants.map(plant => {
+        console.log(plant)
         return (
           <CardWrapper
             key={plant.id}
@@ -75,7 +76,7 @@ const Grid = ({ children }) => {
             // }
             // plantId={plant.id}
             // plantName={plant.original_title}
-        />)
+        >{plant.common_name}</CardWrapper>)
       })} 
     </CardsWrapper>
   )
