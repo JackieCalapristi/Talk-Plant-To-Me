@@ -35,11 +35,10 @@ export const ImgWrapper = styled.div`
   padding: 30px;
 
   img {
-    border-radius: 10px;
+    border-radius: 3px;
     max-height:100%; 
     max-width:100%;
     padding: 3px;
-    border: 3px solid #000;
   }
 
   @media screen and (min-width: 768px) {
