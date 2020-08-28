@@ -14,7 +14,6 @@ export const CardsWrapper = styled.div`
 export const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   background-color: #FFFFFF;
 	color: #000000;
   border-radius: 10px;
@@ -33,6 +32,8 @@ export const ImgWrapper = styled.div`
   background-color: #222222;
   color: #fff;
   padding: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
 
   img {
     border-radius: 3px;
