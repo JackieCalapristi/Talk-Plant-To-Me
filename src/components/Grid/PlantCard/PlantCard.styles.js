@@ -29,9 +29,7 @@ export const CardWrapper = styled.div`
 `
 export const ImgWrapper = styled.div`
   height: 50px;
-  background-color: #222222;
   color: #fff;
-  padding: 30px;
   flex-wrap: wrap;
   flex-direction: row;
 
@@ -39,7 +37,6 @@ export const ImgWrapper = styled.div`
     border-radius: 3px;
     max-height:100%; 
     max-width:100%;
-    padding: 3px;
   }
 
   @media screen and (min-width: 768px) {
