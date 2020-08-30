@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   height: 120px;
 
   @media screen and (min-width: 768px) {
-    height: 550px;
+    height: 100px;
   }
 `
 export const MenuWrapper = styled.div`
@@ -23,6 +23,7 @@ export const MenuWrapper = styled.div`
 
 export const Logo = styled.div`
   max-width: 100px;
+  margin-left: 20px;
 
   @media screen and (min-width: 768px) {
     max-width: 250px;

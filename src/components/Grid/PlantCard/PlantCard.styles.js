@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 export const GridWrapper = styled.div`
-  background-color: #dddddf;
+  /* background-color: #dddddf; */
 `
 export const CardsWrapper = styled.div`
   display: flex;
@@ -9,7 +9,6 @@ export const CardsWrapper = styled.div`
   flex-direction: row;
   min-height: 150px;
   justify-content: center;
-  padding-bottom: 35px;
 `
 export const CardWrapper = styled.div`
   display: flex;
@@ -17,7 +16,7 @@ export const CardWrapper = styled.div`
   flex-direction: row;
   background-color: #FFFFFF;
 	color: black;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   width: 425px;
 	margin: 20px;
