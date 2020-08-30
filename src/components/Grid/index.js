@@ -9,12 +9,6 @@ import PlantCard from "./PlantCard";
 import { GridWrapper, CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
-// import HeroImage from './elements/HeroImage'
-// import SearchBar from './elements/SearchBar'
-// import Grid from './elements/Grid'
-// import MovieThumb from './elements/MovieThumb'
-// import LoadMoreButton from './elements/LoadMoreButton'
-// import Spinner from './elements/Spinner'
 
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
@@ -42,7 +36,7 @@ const Grid = ({ children }) => {
   const loadMorePlants = () => {
       const searchEndpoint = `${SEARCH_BASE_URL}${searchTerm}&page=${currentPage + 1}`;
       const popularEndpoint = `${ALL_PLANTS_BASE_URL}&page=${currentPage + 1}`;
-      const endpoint = searchTerm ? searchEndpoint : popularEndpoint;
+      const endpoint =  searchTerm ? searchEndpoint : popularEndpoint;
 
       fetchPlants(endpoint);
   };
@@ -63,6 +57,8 @@ const Grid = ({ children }) => {
                 clickable
                 image={plant.image_url}
                 name={plant.common_name}
+                family={plant.family}
+                scientific_name={plant.scientific_name}
                 // plantId={plant.id}
               />)
           })} 

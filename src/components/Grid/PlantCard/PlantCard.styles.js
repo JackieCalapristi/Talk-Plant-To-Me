@@ -19,7 +19,7 @@ export const CardWrapper = styled.div`
 	color: black;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 425px;
 	margin: 20px;
   overflow: hidden;
   
@@ -29,21 +29,31 @@ export const CardWrapper = styled.div`
   }
 `
 export const ImgWrapper = styled.div`
-  height: 50px;
+  height: 125px;
   color: black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 
+  h1 {
+    font-family: freight-display-pro,serif;
+    font-size: 20px;
+    letter-spacing: .63px;
+    line-height: 44px;
+    font-weight: 900;
+    text-transform: capitalize;
+  }
+
   img {
-    border-radius: 3px;
-    max-height:100%; 
-    max-width:100%;
+    float: left;
+    width:  125px;
+    height: 125x;
+    object-fit: cover;
   }
 
   @media screen and (min-width: 768px) {
     display: block;
-    height: 100px;
+    height: 125px;
     color: black;
     display: flex;
     flex-wrap: wrap;
@@ -54,12 +64,11 @@ export const ImgWrapper = styled.div`
     cursor: pointer;
   }
 `
-export const ViewWorkWrapper = styled.div`
-  color: #fff;
+export const SeePlantWrapper = styled.div`
+  color: black;
   display: none;
   font-size: 12px;
   opacity: 0.6;
-  margin-top: 30px;
   text-decoration: none;
 
   @media screen and (min-width: 768px) {
@@ -67,12 +76,7 @@ export const ViewWorkWrapper = styled.div`
   }
 `
 export const TextWrapper = styled.div`
-  width: 270px;
-  padding: 20px;
-
-  h2 {
-    margin: 0;
-  }
+  
 `
 export const StatWrapper = styled.div`
   display: flex;

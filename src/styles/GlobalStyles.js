@@ -54,7 +54,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 2.5rem;
     letter-spacing: 1px;
     margin: 10px 0;
-    color: #FFFFFF;
+    color: #000;
     font-weight: normal;
 
     @media screen and (min-width: 768px) {
