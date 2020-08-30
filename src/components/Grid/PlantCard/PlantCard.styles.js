@@ -39,9 +39,10 @@ export const ImgWrapper = styled.div`
     font-family: freight-display-pro,serif;
     font-size: 20px;
     letter-spacing: .63px;
-    line-height: 44px;
+    line-height: 30px;
     font-weight: 900;
     text-transform: capitalize;
+    margin: 15px 0px 0px 15px;
   }
 
   img {
@@ -64,18 +65,37 @@ export const ImgWrapper = styled.div`
     cursor: pointer;
   }
 `
-export const SeePlantWrapper = styled.div`
+export const LearnMoreWrapper = styled.div`
   color: black;
   display: none;
   font-size: 12px;
   opacity: 0.6;
   text-decoration: none;
+  margin: 15px 0 0 15px;
 
   @media screen and (min-width: 768px) {
     display: inline-block;
   }
 `
+
+export const DescriptionWrapper = styled.div`
+    font-family: proxima-nova,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 0 15px;
+    overflow-x: hidden;
+    letter-spacing: 0;
+`
+
 export const TextWrapper = styled.div`
+  h6 {
+    margin: 13px 0px 5px 15px;
+    text-transform: uppercase;
+    color: #3cec6c;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+  }
   
 `
 export const StatWrapper = styled.div`

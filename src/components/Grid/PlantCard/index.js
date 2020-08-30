@@ -6,7 +6,8 @@ import {
   TextWrapper,
   StatWrapper,
   DateWrapper,
-  SeePlantWrapper,
+  DescriptionWrapper,
+  LearnMoreWrapper,
 } from "./PlantCard.styles"
 
 const PlantCard = ({ name, image, family, scientific_name }) => (
@@ -15,12 +16,12 @@ const PlantCard = ({ name, image, family, scientific_name }) => (
     <ImgWrapper>
         <img src={image} />
         <TextWrapper>
-          <div>Family: {family}</div>
+          <h6>Family: {family}</h6>
           <h1>{name}</h1>
-          <div>Scientific Name: {scientific_name}</div>
-          <SeePlantWrapper>
-              See Plant >
-          </SeePlantWrapper>
+          <DescriptionWrapper>Scientific Name: {scientific_name}</DescriptionWrapper>
+          <LearnMoreWrapper>
+              Learn More >
+          </LearnMoreWrapper>
         </TextWrapper>
     </ImgWrapper>
   </CardWrapper>
