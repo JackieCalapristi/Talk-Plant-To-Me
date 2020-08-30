@@ -14,8 +14,9 @@ export const CardsWrapper = styled.div`
 export const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   background-color: #FFFFFF;
-	color: #000000;
+	color: black;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -29,7 +30,8 @@ export const CardWrapper = styled.div`
 `
 export const ImgWrapper = styled.div`
   height: 50px;
-  color: #fff;
+  color: black;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 
@@ -42,6 +44,10 @@ export const ImgWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: block;
     height: 100px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   :hover {
