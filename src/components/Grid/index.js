@@ -9,6 +9,7 @@ import PlantCard from "./PlantCard";
 import { GridWrapper, CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
+import SearchBar from "../SearchBar";
 
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
@@ -46,7 +47,9 @@ const Grid = ({ children }) => {
 
   // console.log(plants, error, loading);
   return (
-    <GridWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
+    <div>
+      <SearchBar callback={searchPlants}/>
+      <GridWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
       <CardsWrapper>
         {plants.map(plant => {
             console.log(plant)
@@ -64,6 +67,8 @@ const Grid = ({ children }) => {
           })} 
         </CardsWrapper>
     </GridWrapper>
+    </div>
+    
   )
 };
 

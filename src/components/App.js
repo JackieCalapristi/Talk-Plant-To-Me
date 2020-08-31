@@ -16,7 +16,6 @@ function App() {
       <GlobalStyles />
       <Header />
       <Welcome />
-      <SearchBar />
       <Grid />
       <LoadMore />
     </div>
