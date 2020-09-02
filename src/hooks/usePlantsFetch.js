@@ -14,20 +14,16 @@ export const usePlantsFetch = searchTerm => {
 
     try {
       const result = await (await fetch(endpoint)).json();
-      console.log(result.data);
-        setState(prev => {
-          console.log("TEST", prev, ...prev.plants, ...result.data);
-          return {
-            // ...prev,
-            // plants: [...prev.plants, ...result.data],
-                // isLoadMore !== -1
-                //     ? [...prev.movies, ...result.results]
-                //     : [...result.results],
-            // heroImage: prev.heroImage || result.results[0],
-            // currentPage: result.page,
-            // totalPages: result.total_pages,
-        }
-      });
+      setState(prev => ({
+          ...prev,
+          plants: [...prev.plants, ...result.data],
+              // isLoadMore !== -1
+              //     ? [...prev.movies, ...result.results]
+              //     : [...result.results],
+          // heroImage: prev.heroImage || result.results[0],
+          // currentPage: result.page,
+          // totalPages: result.total_pages,
+      }));
     }
     catch (error) {
         setError(true);
