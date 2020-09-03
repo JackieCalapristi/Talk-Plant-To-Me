@@ -10,6 +10,7 @@ import { GridWrapper, CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
 import SearchBar from "../SearchBar";
+import Spinner from "../Spinner";
 
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
@@ -42,28 +43,28 @@ const Grid = ({ children }) => {
   };
 
   // if (error) return <div>Something went wrong...</div>
-  // if (!movies[0]) return <Spinner />
+  if (!plants[0]) return <Spinner />
 
   // console.log(plants, error, loading);
   return (
     <div>
       <SearchBar callback={searchPlants} />
       <GridWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
-      <CardsWrapper>
-        {plants.map(plant => {
-          console.log(plant)
-            return (
-              <PlantCard
-                key={plant.id + plant.genus_id}
-                clickable
-                image={plant.image_url}
-                name={plant.common_name}
-                family={plant.family}
-                scientific_name={plant.scientific_name}
-              />)
-          })} 
-        </CardsWrapper>
-    </GridWrapper>
+        <CardsWrapper>
+          {plants.map(plant => {
+            console.log(plant)
+              return (
+                <PlantCard
+                  key={plant.id + plant.genus_id}
+                  clickable
+                  image={plant.image_url}
+                  name={plant.common_name}
+                  family={plant.family}
+                  scientific_name={plant.scientific_name}
+                />)
+            })} 
+          </CardsWrapper>
+      </GridWrapper>
     </div>
   )
 };
