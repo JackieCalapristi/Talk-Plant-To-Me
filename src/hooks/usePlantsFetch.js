@@ -16,12 +16,12 @@ export const usePlantsFetch = searchTerm => {
       const result = await (await fetch(endpoint)).json();
       setState(prev => ({
           ...prev,
-          plants: [...prev.plants, ...result.data],
-              // isLoadMore !== -1
-              //     ? [...prev.movies, ...result.results]
-              //     : [...result.results],
+          plants: 
+              isLoadMore !== -1
+                  ? [...prev.plants, ...result.data]
+                  : [...result.data],
           // heroImage: prev.heroImage || result.results[0],
-          // currentPage: result.page,
+          currentPage: result.page,
           // totalPages: result.total_pages,
       }));
     }

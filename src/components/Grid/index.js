@@ -29,7 +29,6 @@ const Grid = ({ children }) => {
       const endpoint = search 
           ? SEARCH_BASE_URL + search 
           : ALL_PLANTS_BASE_URL;
-
       setSearchTerm(search);
       fetchPlants(endpoint);
   }
@@ -48,27 +47,24 @@ const Grid = ({ children }) => {
   // console.log(plants, error, loading);
   return (
     <div>
-      <SearchBar callback={searchPlants}/>
+      <SearchBar callback={searchPlants} />
       <GridWrapper header={searchTerm ? 'Search Result' : 'Popular Movies' }>
       <CardsWrapper>
         {plants.map(plant => {
-            console.log(plant)
-
+          console.log(plant)
             return (
               <PlantCard
-                key={plant.id}
+                key={plant.id + plant.genus_id}
                 clickable
                 image={plant.image_url}
                 name={plant.common_name}
                 family={plant.family}
                 scientific_name={plant.scientific_name}
-                // plantId={plant.id}
               />)
           })} 
         </CardsWrapper>
     </GridWrapper>
     </div>
-    
   )
 };
 
