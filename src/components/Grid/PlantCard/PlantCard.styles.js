@@ -90,7 +90,7 @@ export const TextWrapper = styled.div`
   h6 {
     margin: 13px 0px 5px 15px;
     text-transform: uppercase;
-    color: #3cec6c;
+    color: #16d47b;
     font-family: proxima-nova,sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px;

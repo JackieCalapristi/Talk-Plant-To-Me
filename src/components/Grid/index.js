@@ -42,10 +42,9 @@ const Grid = ({ children }) => {
       fetchPlants(endpoint);
   };
 
-  // if (error) return <div>Something went wrong...</div>
+  if (error) return <div>Something went wrong...</div>
   if (!plants[0]) return <Spinner />
 
-  // console.log(plants, error, loading);
   return (
     <div>
       <SearchBar callback={searchPlants} />
