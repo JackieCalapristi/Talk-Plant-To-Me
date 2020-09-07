@@ -1,8 +1,5 @@
 import styled, { css } from "styled-components"
 
-export const GridWrapper = styled.div`
-  /* background-color: #dddddf; */
-`
 export const CardsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;

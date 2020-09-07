@@ -1,9 +1,10 @@
 import React from 'react';
+import { Router } from '@reach/router';
 
 //Components
-import Header from './Header'
-import Grid from './Grid';
-import Welcome from './Welcome';
+import PlantsHome from './PlantsHome'
+import PlantPage from './PlantPage'
+import NotFound from './NotFound'
 
 // Styles
 import { GlobalStyles } from '../styles/GlobalStyles'
@@ -12,9 +13,10 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <Header />
-      <Welcome />
-      <Grid />
+      <Router>
+        <PlantsHome path="/" />
+        <PlantPage path="/:plantId" />
+      </Router>
     </div>
   );
 }

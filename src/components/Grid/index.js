@@ -8,7 +8,7 @@ import {
 
 // Styles
 import PlantCard from "./PlantCard";
-import { GridWrapper, CardsWrapper } from "./PlantCard/PlantCard.styles"
+import { CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
 import SearchBar from "../SearchBar";
@@ -50,8 +50,6 @@ const Grid = ({ children }) => {
       const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`;
       const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`;
       const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint;
-
-      console.log("HI", searchTerm, endpoint);
       fetchPlants(endpoint);
   };
 
@@ -65,11 +63,9 @@ const Grid = ({ children }) => {
 
   return (
     <div>
-      { console.log("endpoint", firstPageUrl, totalPages)}
       <SearchBar callback={searchPlants} />
       <div>{totalResults}</div>
-      {loading && <Spinner />}
-      {!loading && <GridWrapper header={searchTerm ? 'Search Result' : 'Plants' }>
+      <div header={searchTerm ? 'Search Results' : 'Plants' }>
         <CardsWrapper>
           {plants.map(plant => {
               return (
@@ -83,7 +79,8 @@ const Grid = ({ children }) => {
                 />)
             })} 
           </CardsWrapper>
-      </GridWrapper>}
+      </div>
+      {loading && <Spinner />}
       {!isLastPage() && !loading && (
           <LoadMore text="Load More" callback={loadMorePlants} />
       )}

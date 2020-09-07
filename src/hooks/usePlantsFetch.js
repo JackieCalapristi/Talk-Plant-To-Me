@@ -14,23 +14,23 @@ export const usePlantsFetch = searchTerm => {
 
     try {
       const result = await (await fetch(endpoint)).json();
-      console.log("test", result, result.meta.total);
+      
       setState(prev => ({
-          ...prev,
-          plants: 
-              isLoadMore !== -1
-                  ? [...prev.plants, ...result.data]
-                  : [...result.data],
-          firstPageUrl: result.links.first,
-          nextPageUrl: result.links.next,
-          lastPageUrl: result.links.last,
-          totalResults: result.meta.total,
-          totalPages: Math.ceil(result.meta.total / 20),
+        ...prev,
+        plants: 
+          isLoadMore !== -1
+            ? [...prev.plants, ...result.data]
+            : [...result.data],
+        firstPageUrl: result.links.first,
+        nextPageUrl: result.links.next,
+        lastPageUrl: result.links.last,
+        totalResults: result.meta.total,
+        totalPages: Math.ceil(result.meta.total / 20),
       }));
     }
     catch (error) {
-        setError(true);
-        console.log(error);
+      setError(true);
+      console.log(error);
     }
   setLoading(false);
 }
