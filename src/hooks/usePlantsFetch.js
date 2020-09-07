@@ -14,17 +14,18 @@ export const usePlantsFetch = searchTerm => {
 
     try {
       const result = await (await fetch(endpoint)).json();
-      console.log("test", result);
+      console.log("test", result, result.meta.total);
       setState(prev => ({
           ...prev,
           plants: 
               isLoadMore !== -1
                   ? [...prev.plants, ...result.data]
                   : [...result.data],
-          currentPageUrl: result.links.first,
+          firstPageUrl: result.links.first,
           nextPageUrl: result.links.next,
           lastPageUrl: result.links.last,
-          totalPages: result.meta.total / 20,
+          totalResults: result.meta.total,
+          totalPages: Math.ceil(result.meta.total / 20),
       }));
     }
     catch (error) {

@@ -22,7 +22,14 @@ const Grid = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [
       {
-          state: { plants, currentPageUrl, nextPageUrl, lastPageUrl, totalPages }, 
+          state: { 
+            plants, 
+            firstPageUrl, 
+            nextPageUrl, 
+            lastPageUrl, 
+            totalResults,
+            totalPages 
+          }, 
           loading, 
           error
       }, 
@@ -33,20 +40,24 @@ const Grid = ({ children }) => {
       const endpoint = search 
           ? SEARCH_BASE_URL + search 
           : ALL_PLANTS_BASE_URL;
-      setSearchTerm(search);
+      if (firstPageUrl === nextPageUrl) {
+        setSearchTerm(search);
+      }
       fetchPlants(endpoint);
   }
 
   const loadMorePlants = () => {
-      const searchEndpoint = `${API_BASE_URL}${currentPageUrl}${searchTerm}&token=${API_KEY}`;
+      const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`;
       const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`;
       const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint;
-      console.log(API_BASE_URL, currentPageUrl, searchTerm, endpoint);
+
+      console.log("HI", searchTerm, endpoint);
       fetchPlants(endpoint);
   };
 
-  const notLastPage = () => {
-    return currentPageUrl !== lastPageUrl;
+  const isLastPage = () => {
+    //I know, I hate this, too. 
+    return typeof nextPageUrl === "undefined";
   }
 
   if (error) return <div>Something went wrong...</div>
@@ -54,14 +65,16 @@ const Grid = ({ children }) => {
 
   return (
     <div>
-      { console.log("endpoint", currentPageUrl, totalPages)}
+      { console.log("endpoint", firstPageUrl, totalPages)}
       <SearchBar callback={searchPlants} />
-      <GridWrapper header={searchTerm ? 'Search Result' : 'Plants' }>
+      <div>{totalResults}</div>
+      {loading && <Spinner />}
+      {!loading && <GridWrapper header={searchTerm ? 'Search Result' : 'Plants' }>
         <CardsWrapper>
           {plants.map(plant => {
               return (
                 <PlantCard
-                  key={plant.id + plant.genus_id}
+                  key={plant.id}
                   clickable
                   image={plant.image_url}
                   name={plant.common_name}
@@ -70,9 +83,8 @@ const Grid = ({ children }) => {
                 />)
             })} 
           </CardsWrapper>
-      </GridWrapper>
-      {loading && <Spinner />}
-      {notLastPage && !loading && (
+      </GridWrapper>}
+      {!isLastPage() && !loading && (
           <LoadMore text="Load More" callback={loadMorePlants} />
       )}
     </div>
