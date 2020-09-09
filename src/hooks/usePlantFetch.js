@@ -11,9 +11,9 @@ export const usePlantFetch = plantId => {
     setLoading(true);
 
     try {
-      // const endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
-      // const result = await (await fetch(endpoint)).json();
-      
+      const endpoint = `${API_URL}/${plantId}?token=${API_KEY}`;
+      const result = await (await fetch(endpoint)).json();
+      console.log("PLANT DATA", result.data)
       // const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
       // const creditsResult = await (await fetch(creditsEndpoint)).json();
 
@@ -22,9 +22,7 @@ export const usePlantFetch = plantId => {
       // );
 
       setState({
-        ...result,
-        actors: creditsResult.cast,
-        directors
+        plant: result.data
       });
 
     } catch (error) {
@@ -48,5 +46,5 @@ export const usePlantFetch = plantId => {
     localStorage.setItem(plantId, JSON.stringify(state));
   }, [plantId, state])
 
-  return [state, loading, error];
+  return [{ state, loading, error }];
 }

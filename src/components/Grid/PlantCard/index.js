@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from '@reach/router';
 
 import {
   CardWrapper,
@@ -10,10 +11,10 @@ import {
   LearnMoreWrapper,
 } from "./PlantCard.styles"
 
-const PlantCard = ({ name, image, family, scientific_name }) => (
+const PlantCard = ({ name, image, family, scientific_name, plantId }) => (
   <CardWrapper>
-   {/* <a href={slug} rel="noopener noreferrer" target="_blank"> */}
-    <ImgWrapper>
+    <Link to={`/${plantId}`}>
+      <ImgWrapper>
         <img src={image} />
         <TextWrapper>
           <h6>Family: {family}</h6>
@@ -23,7 +24,8 @@ const PlantCard = ({ name, image, family, scientific_name }) => (
               Learn More >
           </LearnMoreWrapper>
         </TextWrapper>
-    </ImgWrapper>
+      </ImgWrapper>
+    </Link>
   </CardWrapper>
 );
 

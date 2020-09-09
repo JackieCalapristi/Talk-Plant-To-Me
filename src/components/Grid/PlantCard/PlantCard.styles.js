@@ -43,8 +43,8 @@ export const ImgWrapper = styled.div`
 
   img {
     float: left;
-    width:  125px;
-    height: 125x;
+    width: 125px;
+    height: 125px;
     object-fit: cover;
   }
 

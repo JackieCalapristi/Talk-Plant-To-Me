@@ -71,6 +71,7 @@ const Grid = ({ children }) => {
               return (
                 <PlantCard
                   key={plant.id}
+                  plantId={plant.id}
                   clickable
                   image={plant.image_url}
                   name={plant.common_name}
