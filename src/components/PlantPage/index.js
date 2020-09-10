@@ -22,13 +22,13 @@ const PlantPage = ({ plantId }) => {
       <MetaDataWrapper>
         <h1>{plant.common_name}</h1>
         <h4>SCIENTIFIC INFO</h4>
-        {plant.genus}
-        {plant.family}
-        {plant.family_common_name}
+        <div>{plant.genus}</div>
+        <div>{plant.family}</div>
+        <div>{plant.family_common_name}</div>
 
         <h4>OTHER PLANT INFO</h4>
-        {plant.edible}
-        {plant.vegetable}
+        <div>{plant.edible}</div>
+        <div>{plant.vegetable}</div>
       </MetaDataWrapper>
     </PlantPageWrapper>
   );
