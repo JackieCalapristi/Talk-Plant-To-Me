@@ -6,6 +6,7 @@ import PlantsHome from './PlantsHome'
 import PlantPage from './PlantPage'
 import Header from './Header'
 import NotFound from './NotFound'
+import Footer from './Footer'
 
 // Styles
 import { GlobalStyles } from '../styles/GlobalStyles'
@@ -19,6 +20,7 @@ function App() {
         <PlantsHome path="/" />
         <PlantPage path="/:plantId" />
       </Router>
+      <Footer />
     </div>
   );
 }
