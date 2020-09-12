@@ -1,5 +1,8 @@
 import React from "react"
 
-const Footer = () => (<div>I'm a footer</div>);
+// Styles
+import { Wrapper } from './Footer.styles'
+
+const Footer = () => (<Wrapper>Made by Jackie Calapristi</Wrapper>);
 
 export default Footer;
