@@ -1,11 +1,11 @@
 import React from "react"
 
 // Styles
-import { Wrapper } from "./Welcome.styles"
+import { Wrapper, Title } from "./Welcome.styles"
 
 const Welcome = () => (
   <Wrapper>
-    <h1>Talk Plant To Me</h1>
+    <Title><span role="img" aria-label="growing left emoji">🌱</span> Talk Plant To Me</Title>
     <h5>Learn more about your favorite plants & <br /> become a better plant parent.</h5>
   </Wrapper>
 );

@@ -51,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 25px;
     letter-spacing: 1px;
     margin: 10px 0;
     color: #000;
@@ -68,7 +68,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     letter-spacing: 1px;
     margin: 10px 0;
-    color: #FFFFFF;
+    color: #000;
 
     @media screen and (min-width: 768px) {
       font-size: 1.5rem;

@@ -26,9 +26,9 @@ const Grid = ({ children }) => {
             plants, 
             firstPageUrl, 
             nextPageUrl, 
-            lastPageUrl, 
+            lastPageUrl,
             totalResults,
-            totalPages 
+            totalPages
           }, 
           loading, 
           error
@@ -64,20 +64,23 @@ const Grid = ({ children }) => {
   return (
     <div>
       <SearchBar callback={searchPlants} />
-      <div>{totalResults}</div>
-      <div header={searchTerm ? 'Search Results' : 'Plants' }>
+      <h1>{searchTerm ? 'Search Results' : 'All Plants' }</h1>
+      <div>{totalResults.toLocaleString()} PLANTS</div>
+      <div>
         <CardsWrapper>
           {plants.map(plant => {
-              return (
-                <PlantCard
-                  key={plant.id}
-                  plantId={plant.id}
-                  clickable
-                  image={plant.image_url}
-                  name={plant.common_name}
-                  family={plant.family}
-                  scientific_name={plant.scientific_name}
-                />)
+              if (plant !== undefined) {
+                return (
+                  <PlantCard
+                    key={plant.id}
+                    plantId={plant.id}
+                    clickable
+                    image={plant.image_url}
+                    name={plant.common_name}
+                    family={plant.family}
+                    scientific_name={plant.scientific_name}
+                  />)
+              }
             })} 
           </CardsWrapper>
       </div>

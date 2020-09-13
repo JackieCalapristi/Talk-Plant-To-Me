@@ -15,7 +15,7 @@ export const LoadMoreBtn = styled.button`
   transition: all 0.3s;
   font-size: 14px;
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 40px auto;
   outline: none;
   border-width: 0;
   border-radius: 0;

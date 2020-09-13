@@ -1,6 +1,12 @@
 import React from "react"
+import { Link } from "@reach/router"
 
-// styles
+// Components
+import About from "../About"
+import Contact from "../Contact"
+import Logo from "../Logo"
+
+// Styles
 import { OverrideGlobalStyle, Wrapper, Nav } from "./MobileMenu.styles";
 
 const MobileMenu = ({ menuOpen, items }) => (
@@ -8,13 +14,9 @@ const MobileMenu = ({ menuOpen, items }) => (
     <OverrideGlobalStyle menuOpen={menuOpen} />
       <Wrapper menuOpen={menuOpen}>
         <Nav>
-          {items.map(item => (
-            <li key={item.id}>
-              <a href={item.link} rel="noopener noreferrer" target="_blank">
-                {item.name}
-              </a>
-            </li>
-          ))}
+          <Link to="/About"><About /></Link>
+          <Link to="/Contact"><Contact /></Link>
+          <Link to="/"><Logo /></Link>
         </Nav>
       </Wrapper>
   </div>

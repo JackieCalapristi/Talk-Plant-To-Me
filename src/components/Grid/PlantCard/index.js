@@ -5,8 +5,6 @@ import {
   CardWrapper,
   ImgWrapper,
   TextWrapper,
-  StatWrapper,
-  DateWrapper,
   DescriptionWrapper,
   LearnMoreWrapper,
 } from "./PlantCard.styles"
@@ -15,7 +13,7 @@ const PlantCard = ({ name, image, family, scientific_name, plantId }) => (
   <CardWrapper>
     <Link to={`/${plantId}`}>
       <ImgWrapper>
-        <img src={image} />
+        <img src={image} alt={name} />
         <TextWrapper>
           <h6>Family: {family}</h6>
           <h1>{name}</h1>

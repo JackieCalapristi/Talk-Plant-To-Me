@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
+import { Link } from "@reach/router"
+
+// Components
+import About from "../About"
+import Contact from "../Contact"
 
 // Styles
 import { Nav } from "./Menu.styles" 
 
 const Menu = ({ items }) => (
   <Nav>
-    {items.map(item => (
-      <li key={item.id}> 
-        <a href={item.link} target={item.name === 'Resume' ? "_blank" : ""}>
-          {item.name} 
-        </a>
-      </li>
-    ))}
+    <li><Link to="/About"><About /></Link></li>
+    <li><Link to="/Contact"><Contact /></Link></li>
   </Nav>
 );
 

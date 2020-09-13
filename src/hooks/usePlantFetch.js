@@ -13,13 +13,6 @@ export const usePlantFetch = plantId => {
     try {
       const endpoint = `${API_URL}/${plantId}?token=${API_KEY}`;
       const result = await (await fetch(endpoint)).json();
-      console.log("PLANT DATA", result.data)
-      // const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
-      // const creditsResult = await (await fetch(creditsEndpoint)).json();
-
-      // const directors = creditsResult.crew.filter(
-      //   member => member.job === 'Director' 
-      // );
 
       setState({
         plant: result.data

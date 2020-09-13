@@ -7,7 +7,7 @@ export const PlantPageWrapper = styled.div`
 
   img {
     float: left;
-    width: 650px;
+    width: 550px;
     height: 500px;
     object-fit: cover;
     clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
@@ -20,4 +20,8 @@ export const MetaDataWrapper = styled.div`
   flex-direction: column;
   margin-left: 15px;
   justify-content: center;
+`;
+
+export const Title = styled.div`
+  font-size: 35px;
 `;

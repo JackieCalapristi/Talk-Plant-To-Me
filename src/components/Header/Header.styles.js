@@ -4,10 +4,10 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 120px;
+  height: 10px;
 
   @media screen and (min-width: 768px) {
-    height: 100px;
+    height: 80px;
   }
 `
 export const MenuWrapper = styled.div`
@@ -21,11 +21,16 @@ export const MenuWrapper = styled.div`
   }
 `
 
-export const Logo = styled.div`
-  max-width: 100px;
+export const LogoStyles = styled.div`
   margin-left: 20px;
+  display: none;
+  color: #000;
+
+  :hover {
+    opacity: 0.7;
+  }
 
   @media screen and (min-width: 768px) {
-    max-width: 250px;
+    display: block;
   }
 `
