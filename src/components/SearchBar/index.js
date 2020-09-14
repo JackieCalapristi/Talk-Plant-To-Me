@@ -26,7 +26,7 @@ const SearchBar = ({ callback }) => {
         {/* <FontAwesome className="fa-search" name="search" size="2x" /> */}
         <input 
           type="text"
-          placeholder="Search Plants"
+          placeholder="Search for a plant (i.e. Rosemary)"
           onChange={doSearch}
           value={state}
         />

@@ -5,7 +5,7 @@ export const StyledSearchBar = styled.div`
   height: 100px;
   background: #16d47b52;
   padding: 20px 20px 0px 20px;
-  margin: 0 0 20px 0;
+  margin: 0 0 5px 0;
   box-sizing: border-box;
   color: #000;
 
@@ -52,7 +52,7 @@ export const StyledSearchBarContent = styled.div`
     }
 
     ::placeholder {
-      font-size: 15px;
+      font-size: 12px;
     }
 
     @media screen and (max-width: 720px) {

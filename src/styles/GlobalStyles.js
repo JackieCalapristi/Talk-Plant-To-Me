@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import MuliRegular from "../fonts/Muli-Regular.woff"
 import MuliBlack from "../fonts/Muli-Black.woff"
+import AmaticSC from "../fonts/AmaticSC-Regular.ttf"
 
 export const colors = {
   white: "#fff",
@@ -30,6 +31,11 @@ export const GlobalStyles = createGlobalStyle`
       url('${MuliBlack}') format('woff');
     font-weight: 300;
     font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Amatic SC';
+    src: url('${AmaticSC}');
   }
 
   body {

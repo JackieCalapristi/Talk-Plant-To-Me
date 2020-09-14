@@ -20,17 +20,3 @@ export const MenuWrapper = styled.div`
     align-items: center;
   }
 `
-
-export const LogoStyles = styled.div`
-  margin-left: 20px;
-  display: none;
-  color: #000;
-
-  :hover {
-    opacity: 0.7;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-`

@@ -15,8 +15,8 @@ export const CardWrapper = styled.div`
 	color: black;
   border-radius: 3px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  width: 425px;
-	margin: 20px;
+  width: 450px;
+	margin: 20px 0 0 20px;
   overflow: hidden;
   
   :hover {
@@ -32,11 +32,10 @@ export const ImgWrapper = styled.div`
   flex-direction: row;
 
   h1 {
-    font-family: freight-display-pro,serif;
+    font-family: proxima-nova, sans-serif;
     font-size: 20px;
     letter-spacing: .63px;
     line-height: 30px;
-    font-weight: 900;
     text-transform: capitalize;
     margin: 15px 0px 0px 15px;
   }
@@ -75,12 +74,13 @@ export const LearnMoreWrapper = styled.div`
 `
 
 export const DescriptionWrapper = styled.div`
-    font-family: proxima-nova,sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0 0 0 15px;
-    overflow-x: hidden;
-    letter-spacing: 0;
+  font-family: proxima-nova,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 0 15px;
+  overflow-x: hidden;
+  letter-spacing: 0;
+  color: #666;
 `
 
 export const TextWrapper = styled.div`

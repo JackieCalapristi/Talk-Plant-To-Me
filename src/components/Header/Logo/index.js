@@ -1,6 +1,6 @@
 import React from "react"
 
-import { LogoStyles } from "../Header.styles"
+import { LogoStyles } from "./Logo.styles"
 
 const Logo = () => (
   <LogoStyles>

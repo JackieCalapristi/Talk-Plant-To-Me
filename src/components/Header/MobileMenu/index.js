@@ -9,7 +9,7 @@ import Logo from "../Logo"
 // Styles
 import { OverrideGlobalStyle, Wrapper, Nav } from "./MobileMenu.styles";
 
-const MobileMenu = ({ menuOpen, items }) => (
+const MobileMenu = ({ menuOpen }) => (
   <div>
     <OverrideGlobalStyle menuOpen={menuOpen} />
       <Wrapper menuOpen={menuOpen}>

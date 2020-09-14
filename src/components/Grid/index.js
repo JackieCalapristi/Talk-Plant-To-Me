@@ -8,6 +8,7 @@ import {
 
 // Styles
 import PlantCard from "./PlantCard";
+import { SearchResultsWrapper } from "./Grid.styles"
 import { CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
@@ -18,7 +19,7 @@ import LoadMore from "../LoadMore";
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
 
-const Grid = ({ children }) => {
+const Grid = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [
       {
@@ -40,9 +41,7 @@ const Grid = ({ children }) => {
       const endpoint = search 
           ? SEARCH_BASE_URL + search 
           : ALL_PLANTS_BASE_URL;
-      if (firstPageUrl === nextPageUrl) {
-        setSearchTerm(search);
-      }
+      setSearchTerm(search);
       fetchPlants(endpoint);
   }
 
@@ -50,6 +49,7 @@ const Grid = ({ children }) => {
       const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`;
       const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`;
       const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint;
+      console.log('hello', searchTerm)
       fetchPlants(endpoint);
   };
 
@@ -64,8 +64,12 @@ const Grid = ({ children }) => {
   return (
     <div>
       <SearchBar callback={searchPlants} />
-      <h1>{searchTerm ? 'Search Results' : 'All Plants' }</h1>
-      <div>{totalResults.toLocaleString()} PLANTS</div>
+      {console.log(plants)}
+      <SearchResultsWrapper>
+        <div>{searchTerm ? 'Search Results ' : 'All Plants ' }</div>
+        <span role="img">&nbsp; 🍃 &nbsp;</span>
+        <div>{totalResults.toLocaleString()} results</div>
+      </SearchResultsWrapper>
       <div>
         <CardsWrapper>
           {plants.map(plant => {
