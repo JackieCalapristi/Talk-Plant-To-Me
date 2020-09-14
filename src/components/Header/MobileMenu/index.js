@@ -16,7 +16,6 @@ const MobileMenu = ({ menuOpen }) => (
         <Nav>
           <Link to="/About"><About /></Link>
           <Link to="/Contact"><Contact /></Link>
-          <Link to="/"><Logo /></Link>
         </Nav>
       </Wrapper>
   </div>

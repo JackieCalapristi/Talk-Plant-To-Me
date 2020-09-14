@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@reach/router'
 
 // Components
 import Spinner from '../Spinner'
@@ -13,7 +14,8 @@ import {
   BlocksWrapper, 
   BlockWrapper, 
   ImageTextWrapper,
-  Title 
+  Title,
+  Header
 } from './PlantPage.styles'
 
 // Hooks
@@ -22,12 +24,16 @@ import { usePlantFetch } from '../../hooks/usePlantFetch'
 const PlantPage = ({ plantId }) => {
   const [{ state: { plant }, loading, error }] = usePlantFetch(plantId);
 
-  console.log(plant)
   if (error) return <div>Something went wrong ...</div>;
   if (loading) return <Spinner />;
 
   return (
     <PlantPageWrapper> 
+      <Header>
+        <Link to="/">
+          <span role="img" aria-label="growing left emoji">🌱</span> Talk Plant To Me
+        </Link>
+      </Header>
       <ImageTextWrapper>
         <div>
           <img src={plant.image_url !== null ? plant.image_url : NoImage} alt={plant.common_name} />
@@ -38,6 +44,7 @@ const PlantPage = ({ plantId }) => {
           <div>Family: { plant.family_common_name !== (undefined || null) ? plant.family_common_name : plant.family } </div>
         </BlockWrapperMain>
       </ImageTextWrapper>
+
       <BlocksWrapper>
         <BlockWrapper>
           <h4>PLANT CARE</h4>

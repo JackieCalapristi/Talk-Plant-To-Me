@@ -13,5 +13,7 @@ export const LogoStyles = styled.div`
   @media screen and (min-width: 768px) {
     display: block;
     font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    margin-left: 0px;
   }
 `

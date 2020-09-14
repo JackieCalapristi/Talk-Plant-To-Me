@@ -16,8 +16,8 @@ export const PlantPageWrapper = styled.div`
   @media screen and (min-width: 768px) {
     img {
       float: left;
-      width: 650px;
-      height: 450px;
+      width: 500px;
+      height: 500px;
       object-fit: cover;
     }
   }
@@ -62,5 +62,24 @@ export const Title = styled.div`
 
   @media screen and (min-width: 768px) {
     font-size: 35px;
+  }
+`;
+
+export const Header = styled.div`
+ font-family: 'Amatic SC', cursive;
+  transition: all 0.5s ease;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 100;
+  margin: 0 0 0 70px;
+  display: block;
+  height: 75px;
+
+  a {
+    color: #000;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;

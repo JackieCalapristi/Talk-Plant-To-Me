@@ -19,7 +19,6 @@ const Header = () => {
         <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} /> 
         <Menu /> 
-        <Link to="/"> <Logo /> </Link>
       </MenuWrapper>
     </Wrapper>
     

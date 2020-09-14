@@ -49,7 +49,6 @@ const Grid = () => {
       const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`;
       const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`;
       const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint;
-      console.log('hello', searchTerm)
       fetchPlants(endpoint);
   };
 
@@ -64,7 +63,6 @@ const Grid = () => {
   return (
     <div>
       <SearchBar callback={searchPlants} />
-      {console.log(plants)}
       <SearchResultsWrapper>
         <div>{searchTerm ? 'Search Results ' : 'All Plants ' }</div>
         <span role="img">&nbsp; 🍃 &nbsp;</span>
