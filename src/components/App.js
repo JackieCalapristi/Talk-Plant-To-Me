@@ -5,8 +5,9 @@ import { Router } from '@reach/router'
 import PlantsHome from './PlantsHome'
 import PlantPage from './PlantPage'
 import Header from './Header'
-import NotFound from './NotFound'
 import Footer from './Footer'
+import Contact from './Header/Contact'
+import About from './Header/About'
 
 // Styles
 import { GlobalStyles } from '../styles/GlobalStyles'
@@ -18,11 +19,13 @@ function App() {
       <Header />
       <Router>
         <PlantsHome path="/" />
+        <Contact path="/Contact" />
+        <About path="/About" />
         <PlantPage path="/:plantId" />
       </Router>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App

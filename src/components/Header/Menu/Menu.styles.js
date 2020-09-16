@@ -35,4 +35,4 @@ export const Nav = styled.ul`
   @media screen and (min-width: 768px) {
     display: block;
   }
-`;
+`

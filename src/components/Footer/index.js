@@ -1,8 +1,16 @@
 import React from "react"
 
 // Styles
-import { Wrapper } from './Footer.styles'
+import { Wrapper, LinkWrapper } from './Footer.styles'
 
-const Footer = () => (<Wrapper>Made by Jackie Calapristi © {(new Date().getFullYear())} </Wrapper>);
+const Footer = () => (
+  <Wrapper>
+    <LinkWrapper>
+      <div>Made by </div>
+      <a href="https://www.jackiecalapristi.com"> Jackie Calapristi </a> 
+      © {(new Date().getFullYear())} 
+    </LinkWrapper>
+  </Wrapper>
+);
 
 export default Footer;

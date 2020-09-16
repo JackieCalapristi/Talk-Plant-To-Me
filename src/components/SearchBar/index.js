@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react'
-// import FontAwesome from 'react-fontawesome'
+
+// Icons
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { 
   StyledSearchBar, 
@@ -7,23 +10,23 @@ import {
 } from './SearchBar.styles'
 
 const SearchBar = ({ callback }) => {
-  const [state, setState] = useState('');
-  const timeOut = useRef(null);
+  const [state, setState] = useState('')
+  const timeOut = useRef(null)
 
   const doSearch = event => {
-    const { value } = event.target;
-    clearTimeout(timeOut.current);
-    setState(value);
+    const { value } = event.target
+    clearTimeout(timeOut.current)
+    setState(value)
 
     timeOut.current = setTimeout(() => {
-      callback(value);
-    }, 500);
+      callback(value)
+    }, 500)
   }
 
   return (
     <StyledSearchBar>
       <StyledSearchBarContent>
-        {/* <FontAwesome className="fa-search" name="search" size="2x" /> */}
+        <FontAwesomeIcon icon={faSearch} />
         <input 
           type="text"
           placeholder="Search for a plant"
@@ -33,7 +36,7 @@ const SearchBar = ({ callback }) => {
       </StyledSearchBarContent>
     </StyledSearchBar>
 
-  );
+  )
 }
 
 export default SearchBar

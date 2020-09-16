@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const LoadMoreBtn = styled.button`
-  font-family: proxima-nova,sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -27,4 +27,4 @@ export const LoadMoreBtn = styled.button`
   :hover {
     opacity: 0.8;
   }
-`;
+`

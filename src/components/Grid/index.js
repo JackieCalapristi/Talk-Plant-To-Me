@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import {
   ALL_PLANTS_BASE_URL,
   SEARCH_BASE_URL,
   API_BASE_URL,
   API_KEY
-} from '../../config';
+} from '../../config'
 
 // Styles
-import PlantCard from "./PlantCard";
+import PlantCard from "./PlantCard"
 import { SearchResultsWrapper } from "./Grid.styles"
 import { CardsWrapper } from "./PlantCard/PlantCard.styles"
 
 //import Components
-import SearchBar from "../SearchBar";
-import Spinner from "../Spinner";
-import LoadMore from "../LoadMore";
+import SearchBar from "../SearchBar"
+import Spinner from "../Spinner"
+import LoadMore from "../LoadMore"
 
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
 
 const Grid = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('')
   const [
       {
           state: { 
@@ -35,26 +35,26 @@ const Grid = () => {
           error
       }, 
       fetchPlants
-  ] = usePlantsFetch(searchTerm);
+  ] = usePlantsFetch(searchTerm)
 
   const searchPlants = search => {
       const endpoint = search 
           ? SEARCH_BASE_URL + search 
-          : ALL_PLANTS_BASE_URL;
-      setSearchTerm(search);
-      fetchPlants(endpoint);
+          : ALL_PLANTS_BASE_URL
+      setSearchTerm(search)
+      fetchPlants(endpoint)
   }
 
   const loadMorePlants = () => {
-      const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`;
-      const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`;
-      const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint;
-      fetchPlants(endpoint);
+      const searchEndpoint = `${API_BASE_URL}${firstPageUrl}${searchTerm}&token=${API_KEY}`
+      const plantsEndpoint = `${API_BASE_URL}${nextPageUrl}&token=${API_KEY}`
+      const endpoint =  searchTerm ? searchEndpoint : plantsEndpoint
+      fetchPlants(endpoint)
   };
 
   const isLastPage = () => {
     //I know, I hate this, too. 
-    return typeof nextPageUrl === "undefined";
+    return typeof nextPageUrl === "undefined"
   }
 
   if (error) return <div>Something went wrong...</div>
@@ -92,6 +92,6 @@ const Grid = () => {
       )}
     </div>
   )
-};
+}
 
-export default Grid;
+export default Grid

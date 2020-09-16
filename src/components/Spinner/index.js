@@ -3,4 +3,4 @@ import { StyledSpinner } from './Spinner.styles'
 
 const Spinner = () => <StyledSpinner />
 
-export default Spinner;
+export default Spinner

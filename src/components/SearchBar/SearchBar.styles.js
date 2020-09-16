@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const StyledSearchBar = styled.div`
   width: 100%;
   height: 100px;
-  background: #16d47b52;
+  background: #bbefd4;
   padding: 20px 20px 0px 20px;
   margin: 0 0 5px 0;
   box-sizing: border-box;
@@ -12,7 +12,7 @@ export const StyledSearchBar = styled.div`
   @media screen and (max-width: 720px) { 
 
   }
-`;
+`
 
 export const StyledSearchBarContent = styled.div`
   max-width: 1280px;
@@ -23,19 +23,19 @@ export const StyledSearchBarContent = styled.div`
 
   .fa-search {
     position: absolute;
-    left: 20px;
-    top: 12px;
-    color: #000;
+    left: 9px;
+    top: 19px;
+    color: #666;
     z-index: 1000;
   }
 
   input {
-    font-family: 'Abel', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-size: 14px;
     position: absolute;
     left: 0px;
     margin: 8px 0;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
     border: 0;
     width: 95%;
     background: transparent;
@@ -52,11 +52,12 @@ export const StyledSearchBarContent = styled.div`
     }
 
     ::placeholder {
-      font-size: 12px;
+      font-family: proxima-nova, sans-serif;
+      font-size: 15px;
     }
 
     @media screen and (max-width: 720px) {
       font-size: 28px;
     }
   }
-`;
+`

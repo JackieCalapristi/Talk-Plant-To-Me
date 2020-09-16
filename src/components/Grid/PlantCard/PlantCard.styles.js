@@ -38,6 +38,7 @@ export const ImgWrapper = styled.div`
     line-height: 30px;
     text-transform: capitalize;
     margin: 15px 0px 0px 15px;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%,#bbefd4 75%);
   }
 
   img {
@@ -71,16 +72,6 @@ export const LearnMoreWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: inline-block;
   }
-`
-
-export const DescriptionWrapper = styled.div`
-  font-family: proxima-nova,sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  margin: 0 0 0 15px;
-  overflow-x: hidden;
-  letter-spacing: 0;
-  color: #666;
 `
 
 export const TextWrapper = styled.div`

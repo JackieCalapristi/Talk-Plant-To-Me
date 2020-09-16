@@ -1,6 +1,4 @@
 import { createGlobalStyle } from "styled-components"
-import MuliRegular from "../fonts/Muli-Regular.woff"
-import MuliBlack from "../fonts/Muli-Black.woff"
 import AmaticSC from "../fonts/AmaticSC-Regular.ttf"
 
 export const colors = {
@@ -18,22 +16,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Muli Regular';
-    src: local('Muli Regular'), local('MuliRegular'),
-      url('${MuliRegular}') format('woff');
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Muli Black';
-    src: local('Muli Black'), local('MuliBlack'),
-      url('${MuliBlack}') format('woff');
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  @font-face {
     font-family: 'Amatic SC';
     src: url('${AmaticSC}');
   }
@@ -41,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: #FFF;
     color: #000;
-    font-family: "Muli Regular", Arial, Helvetica, sans-serif;
+    font-family: proxima-nova, sans-serif;;
     margin: 0;
     transition: all 0.5s ease;
   }
@@ -84,4 +66,4 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
-`;
+`

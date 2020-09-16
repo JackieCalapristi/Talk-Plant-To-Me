@@ -7,6 +7,6 @@ const Logo = () => (
     <span role="img" aria-label="growing left emoji">🌱</span>
     Talk Plant To Me
   </LogoStyles>
-);
+)
 
-export default Logo;
+export default Logo

@@ -1,7 +1,7 @@
 import React from "react"
 
 // Styles
-import { HamburgerIcon } from "./Hamburger.styles";
+import { HamburgerIcon } from "./Hamburger.styles"
 
 const Hamburger = ({ menuOpen, setMenuOpen  }) =>  (
   <HamburgerIcon 
@@ -11,6 +11,6 @@ const Hamburger = ({ menuOpen, setMenuOpen  }) =>  (
   >
     <div />
   </HamburgerIcon>
-);
+)
 
-export default Hamburger;
+export default Hamburger

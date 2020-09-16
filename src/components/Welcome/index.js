@@ -23,6 +23,6 @@ const Welcome = () => (
         </a>
     </TrefleApiLinkWrapper>
   </Wrapper>
-);
+)
 
 export default Welcome

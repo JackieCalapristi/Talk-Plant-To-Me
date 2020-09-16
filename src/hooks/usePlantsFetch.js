@@ -10,10 +10,10 @@ export const usePlantsFetch = searchTerm => {
     setError(false);
     setLoading(true);
 
-    const isLoadMore = endpoint.search('page');
+    const isLoadMore = endpoint.search('page')
 
     try {
-      const result = await (await fetch(endpoint)).json();
+      const result = await (await fetch(endpoint)).json()
       
       setState(prev => ({
         ...prev,
@@ -29,20 +29,20 @@ export const usePlantsFetch = searchTerm => {
       }));
     }
     catch (error) {
-      setError(true);
-      console.log(error);
+      setError(true)
+      console.log(error)
     }
-  setLoading(false);
+  setLoading(false)
 }
 
 // Fetch plants initially on mount
 useEffect(() => {
   if (sessionStorage.plantState) {
-    setState(JSON.parse(sessionStorage.plantState));
-    setLoading(false);
+    setState(JSON.parse(sessionStorage.plantState))
+    setLoading(false)
   }
   else {
-    fetchPlants(ALL_PLANTS_BASE_URL);
+    fetchPlants(ALL_PLANTS_BASE_URL)
   }
 }, [])
 
@@ -50,7 +50,7 @@ useEffect(() => {
   if (!searchTerm) {
     sessionStorage.setItem('plantState', JSON.stringify(state))
   }
-}, [searchTerm, state]);
+}, [searchTerm, state])
 
-  return [{state, loading, error}, fetchPlants];
-};
+  return [{state, loading, error}, fetchPlants]
+}

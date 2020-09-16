@@ -4,7 +4,7 @@ export const OverrideGlobalStyle = createGlobalStyle`
   body {
     overflow: ${props => props.menuOpen ? "hidden" : "auto"}
   }
-`;
+`
 
 export const Wrapper = styled.div`
   display: block;
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: none;
   }
-`;
+`
 
 export const Nav = styled.ul`
   position: absolute;
@@ -51,4 +51,4 @@ export const Nav = styled.ul`
       opacity: 0.7;
     }
   }
-`;
+`

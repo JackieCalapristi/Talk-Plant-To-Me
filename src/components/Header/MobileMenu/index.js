@@ -7,7 +7,7 @@ import Contact from "../Contact"
 import Logo from "../Logo"
 
 // Styles
-import { OverrideGlobalStyle, Wrapper, Nav } from "./MobileMenu.styles";
+import { OverrideGlobalStyle, Wrapper, Nav } from "./MobileMenu.styles"
 
 const MobileMenu = ({ menuOpen }) => (
   <div>
@@ -19,6 +19,6 @@ const MobileMenu = ({ menuOpen }) => (
         </Nav>
       </Wrapper>
   </div>
-);
+)
 
-export default MobileMenu;
+export default MobileMenu

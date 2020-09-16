@@ -14,6 +14,6 @@ const Menu = () => (
     <li><Link to="/Contact"><Contact /></Link></li>
     <li><Link to="/">Home</Link></li>
   </Nav>
-);
+)
 
-export default Menu;
+export default Menu
