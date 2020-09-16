@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 export const CardsWrapper = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ export const ImgWrapper = styled.div`
     line-height: 30px;
     text-transform: capitalize;
     margin: 15px 0px 0px 15px;
-    background: linear-gradient(180deg,rgba(255,255,255,0) 50%,#bbefd4 75%);
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#bbefd4 75%);
   }
 
   img {
@@ -82,25 +82,5 @@ export const TextWrapper = styled.div`
     font-family: proxima-nova,sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px;
-  }
-  
-`
-export const StatWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 0 15px 0;
-`
-const sharedStyle = css`
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  font-family: "Muli Black", Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
-
-  img {
-    margin: 0 10px 0 0;
-  }
-`
-export const DateWrapper = styled.div`
-  ${sharedStyle}
+  } 
 `

@@ -76,7 +76,7 @@ export const PlantDataColumnsWrapper = styled.div`
 export const Title = styled.div`
   font-size: 25px;
   font-weight: 200;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%,#bbefd4 75%);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#bbefd4 75%);
   display: inline;
 
   @media screen and (min-width: 768px) {
