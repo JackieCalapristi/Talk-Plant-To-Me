@@ -6,9 +6,9 @@ import { ContactWrapper, Title, ContactText, Signature, IconsWrapper } from './C
 import { Header } from '../../PlantPage/PlantPage.styles'
 
 // Icons
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Images
 import ContactBackground from '../../../images/ContactBackSplash.png'

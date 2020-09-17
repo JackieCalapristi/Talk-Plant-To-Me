@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const ContactWrapper = styled.div`
   background-image: none;

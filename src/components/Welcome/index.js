@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 import { Link } from '@reach/router'
 
 // Styles
-import { Wrapper, Title, TrefleApiLinkWrapper } from "./Welcome.styles"
+import { Wrapper, Title, TrefleApiLinkWrapper } from './Welcome.styles'
 
 // Images
 import TrefleApiImage from '../../images/TrefleLogo.svg'

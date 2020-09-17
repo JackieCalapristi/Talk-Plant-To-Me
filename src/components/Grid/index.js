@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import {
   ALL_PLANTS_BASE_URL,
   SEARCH_BASE_URL,
@@ -7,14 +7,14 @@ import {
 } from '../../config'
 
 // Styles
-import PlantCard from "./PlantCard"
-import { SearchResultsWrapper } from "./Grid.styles"
-import { CardsWrapper } from "./PlantCard/PlantCard.styles"
+import PlantCard from './PlantCard'
+import { SearchResultsWrapper } from './Grid.styles'
+import { CardsWrapper } from './PlantCard/PlantCard.styles'
 
 //import Components
-import SearchBar from "../SearchBar"
-import Spinner from "../Spinner"
-import LoadMore from "../LoadMore"
+import SearchBar from '../SearchBar'
+import Spinner from '../Spinner'
+import LoadMore from '../LoadMore'
 
 // Custom Hook
 import { usePlantsFetch } from '../../hooks/usePlantsFetch' 
