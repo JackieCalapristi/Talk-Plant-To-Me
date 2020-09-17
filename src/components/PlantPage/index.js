@@ -5,8 +5,8 @@ import { Link } from '@reach/router'
 import Spinner from '../Spinner'
 
 // Images
-import NoImage from "../../images/NoImage.png"
-import BackgroundImage from "../../images/Background.jpg"
+import NoImage from '../../images/NoImage.png'
+import BackgroundImage from '../../images/Background.jpg'
 
 // Styles
 import { 

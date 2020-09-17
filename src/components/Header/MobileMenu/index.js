@@ -1,11 +1,6 @@
 import React from "react"
 import { Link } from "@reach/router"
 
-// Components
-import About from "../About"
-import Contact from "../Contact"
-import Logo from "../Logo"
-
 // Styles
 import { OverrideGlobalStyle, Wrapper, Nav } from "./MobileMenu.styles"
 
@@ -14,8 +9,8 @@ const MobileMenu = ({ menuOpen }) => (
     <OverrideGlobalStyle menuOpen={menuOpen} />
       <Wrapper menuOpen={menuOpen}>
         <Nav>
-          <Link to="/About"><About /></Link>
-          <Link to="/Contact"><Contact /></Link>
+          <li><Link to="/About">About</Link></li>
+          <li><Link to="/Contact">Contact</Link></li>
         </Nav>
       </Wrapper>
   </div>

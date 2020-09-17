@@ -26,7 +26,7 @@ const SearchBar = ({ callback }) => {
   return (
     <StyledSearchBar>
       <StyledSearchBarContent>
-        <FontAwesomeIcon icon={faSearch} />
+      <FontAwesomeIcon icon={faSearch} />
         <input 
           type="text"
           placeholder="Search for a plant"

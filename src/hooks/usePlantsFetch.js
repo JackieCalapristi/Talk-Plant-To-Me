@@ -23,9 +23,7 @@ export const usePlantsFetch = searchTerm => {
             : [...result.data],
         firstPageUrl: result.links.first,
         nextPageUrl: result.links.next,
-        lastPageUrl: result.links.last,
-        totalResults: result.meta.total,
-        totalPages: Math.ceil(result.meta.total / 20),
+        totalResults: result.meta.total
       }));
     }
     catch (error) {

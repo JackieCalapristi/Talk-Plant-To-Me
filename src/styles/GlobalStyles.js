@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import AmaticSC from "../fonts/AmaticSC-Regular.ttf"
+import Jaceline from "../fonts/Jaceline.ttf"
 
 export const colors = {
   white: "#fff",
@@ -18,6 +19,11 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Amatic SC';
     src: url('${AmaticSC}');
+  }
+
+  @font-face {
+    font-family: 'Jaceline';
+    src: url('${Jaceline}');
   }
 
   body {

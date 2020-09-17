@@ -17,7 +17,7 @@ const Welcome = () => (
     <h5>Learn more about your favorite plants & <br /> become a better plant parent.</h5>
     <TrefleApiLinkWrapper>
       <div>Powered by </div>
-        <img src={TrefleApiImage} />
+        <img src={TrefleApiImage} alt="Trefle API black clover logo" />
         <a href="https://trefle.io/"> 
           <div>The Trefle API</div>
         </a>

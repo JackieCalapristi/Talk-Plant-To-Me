@@ -1,11 +1,9 @@
 import React, { useState } from "react"
-import { Link } from '@reach/router'
 
 // Components
 import Menu from "./Menu"
 import Hamburger from "./Hamburger"
 import MobileMenu from "./MobileMenu"
-import Logo from "./Logo"
 
 // Styles
 import { MenuWrapper, Wrapper } from "./Header.styles"

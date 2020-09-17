@@ -27,9 +27,7 @@ const Grid = () => {
             plants, 
             firstPageUrl, 
             nextPageUrl, 
-            lastPageUrl,
-            totalResults,
-            totalPages
+            totalResults
           }, 
           loading, 
           error
@@ -65,24 +63,22 @@ const Grid = () => {
       <SearchBar callback={searchPlants} />
       <SearchResultsWrapper>
         <div>{searchTerm ? 'Search Results ' : 'All Plants ' }</div>
-        <span role="img">&nbsp; 🍃 &nbsp;</span>
+        <span role="img" aria-label="Falling leaf icon">&nbsp; 🍃 &nbsp;</span>
         <div>{totalResults.toLocaleString()} results</div>
       </SearchResultsWrapper>
       <div>
         <CardsWrapper>
           {plants.map(plant => {
-              if (plant !== undefined) {
-                return (
-                  <PlantCard
-                    key={plant.id}
-                    plantId={plant.id}
-                    clickable
-                    image={plant.image_url}
-                    name={plant.common_name}
-                    family={plant.family}
-                    scientific_name={plant.scientific_name}
-                  />)
-              }
+            return plant !== undefined && (
+              <PlantCard
+                key={plant.id}
+                plantId={plant.id}
+                clickable
+                image={plant.image_url}
+                name={plant.common_name}
+                family={plant.family}
+                scientific_name={plant.scientific_name}
+              />)
             })} 
           </CardsWrapper>
       </div>
