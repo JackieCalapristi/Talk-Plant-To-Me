@@ -18,7 +18,7 @@ const Welcome = () => (
     <TrefleApiLinkWrapper>
       <div>Powered by </div>
         <img src={TrefleApiImage} alt="Trefle API black clover logo" />
-        <a href="https://trefle.io/"> 
+        <a target="_blank" href="https://trefle.io/"> 
           <div>The Trefle API</div>
         </a>
     </TrefleApiLinkWrapper>
