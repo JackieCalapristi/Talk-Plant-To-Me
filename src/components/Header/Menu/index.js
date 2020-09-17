@@ -1,15 +1,18 @@
 import React from 'react'
-import { Link } from "@reach/router"
 
 // Styles
-import { Nav } from "./Menu.styles" 
+import { Nav } from './Menu.styles'
 
-const Menu = () => (
+const Menu = ({ items }) => (
   <Nav>
-    <li><Link to="/About">About</Link></li>
-    <li><Link to="/Contact">Contact</Link></li>
-    <li><Link to="/">Home</Link></li>
+    {items.map(item => (
+      <li key={item.id}> 
+        <a href={item.link}>
+          {item.name} 
+        </a>
+      </li>
+    ))}
   </Nav>
-)
+);
 
 export default Menu

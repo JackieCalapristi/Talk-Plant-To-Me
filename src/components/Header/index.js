@@ -10,13 +10,18 @@ import { MenuWrapper, Wrapper } from './Header.styles'
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuItems = [
+    {id: 1, name: 'About', link: '/About' }, 
+    {id: 2, name: 'Contact', link: '/Contact'}, 
+    {id: 3, name: 'Home', link: '/'},
+  ];
 
   return (
     <Wrapper>
       <MenuWrapper>
         <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} /> 
-        <Menu /> 
+        <MobileMenu menuOpen={menuOpen} items={menuItems} /> 
+        <Menu items={menuItems} /> 
       </MenuWrapper>
     </Wrapper>
     

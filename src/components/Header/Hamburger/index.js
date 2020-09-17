@@ -7,7 +7,7 @@ const Hamburger = ({ menuOpen, setMenuOpen  }) =>  (
   <HamburgerIcon 
     roll="button"
     menuOpen={menuOpen} 
-    onClick={() => setMenuOpen( prev => !prev) }
+    onClick={() => setMenuOpen(prev => !prev)}
   >
     <div />
   </HamburgerIcon>
