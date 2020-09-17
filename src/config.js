@@ -1,8 +1,8 @@
 // Configuration for the Trefle API
 // Read more about the API here: https://docs.trefle.io/
 
-const API_URL = 'http://cors-anywhere.herokuapp.com/trefle.io/api/v1/species'
-const API_BASE_URL = 'http://cors-anywhere.herokuapp.com/trefle.io'
+const API_URL = 'https://cors-anywhere.herokuapp.com/trefle.io/api/v1/species'
+const API_BASE_URL = 'https://cors-anywhere.herokuapp.com/trefle.io'
 const API_KEY = 'V0FEWm1DcEdlTTBFUUZqTkczVEx5UT09'
 
 const SEARCH_BASE_URL = `${API_URL}/search?token=${API_KEY}&q=`
