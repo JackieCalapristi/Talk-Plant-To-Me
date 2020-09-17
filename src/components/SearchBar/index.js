@@ -29,7 +29,6 @@ const SearchBar = ({ callback }) => {
       <FontAwesomeIcon icon={faSearch} />
         <input 
           type="text"
-          placeholder="Search for a plant"
           onChange={doSearch}
           value={state}
         />

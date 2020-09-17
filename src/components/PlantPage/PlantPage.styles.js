@@ -13,7 +13,6 @@ export const ImageHeaderWrapper = styled.div`
   padding-bottom: 20px;
 
   img {
-    float: left;
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -33,7 +32,6 @@ export const ImageHeaderWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     img {
-      float: left;
       width: 350px;
       height: 350px;
       object-fit: cover;

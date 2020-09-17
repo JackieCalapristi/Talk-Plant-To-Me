@@ -67,15 +67,15 @@ const PlantPage = ({ plantId }) => {
       <PlantDataColumnsWrapper>
         <div>
           <h4>PLANT CARE</h4>
-          <div>Best months for growth {plant.growth.growth_months === null ? "Unknown" : plant.growth.growth_months}</div>
-          <div>Best months for bloom {plant.growth.bloom_months === null ? "Unknown" : plant.growth.bloom_months.join(', ')}</div>
-          <div>Required soil humidity {plant.growth.soil_humidity === null ? "Unknown" : plant.growth.soil_humidity} </div>
-          <div>Required air humidity {plant.growth.atmospheric_humidity === null ? "Unknown" : plant.growth.atmospheric_humidity} </div>
-          <div>Max Temperture {plant.growth.maximum_temperature.deg_c === null ? "Unknown" : plant.growth.maximum_temperature.deg_c + " Celcius"}</div>
-          <div>Min Temperture {plant.growth.minimum_temperature.deg_c === null ? "Unknown" : plant.growth.minimum_temperature.deg_c + " Celcius"}</div>
-          <div>Required Light {plant.growth.light === null ? "Unknown" : plant.growth.light + " Lux"}</div>
-          <div>Max Soil PH {plant.growth.ph_maximum === null ? "Unknown" : plant.growth.ph_maximum } </div>
-          <div>Min Soil PH {plant.growth.ph_minimum === null ? "Unknown" : plant.growth.ph_minimum }</div>
+          <div>Best months for growth: {plant.growth.growth_months === null ? "Unknown" : plant.growth.growth_months}</div>
+          <div>Best months for bloom: {plant.growth.bloom_months === null ? "Unknown" : plant.growth.bloom_months.join(', ')}</div>
+          <div>Required soil humidity: {plant.growth.soil_humidity === null ? "Unknown" : plant.growth.soil_humidity} </div>
+          <div>Required air humidity: {plant.growth.atmospheric_humidity === null ? "Unknown" : plant.growth.atmospheric_humidity} </div>
+          <div>Max Temperture: {plant.growth.maximum_temperature.deg_c === null ? "Unknown" : plant.growth.maximum_temperature.deg_c + " Celcius"}</div>
+          <div>Min Temperture: {plant.growth.minimum_temperature.deg_c === null ? "Unknown" : plant.growth.minimum_temperature.deg_c + " Celcius"}</div>
+          <div>Required Light: {plant.growth.light === null ? "Unknown" : plant.growth.light + " Lux"}</div>
+          <div>Max Soil PH: {plant.growth.ph_maximum === null ? "Unknown" : plant.growth.ph_maximum } </div>
+          <div>Min Soil PH: {plant.growth.ph_minimum === null ? "Unknown" : plant.growth.ph_minimum }</div>
         </div>
         <div>
           <h4>PLANT SPECS</h4>
