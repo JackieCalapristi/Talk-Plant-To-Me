@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@reach/router'
 
 // Styles
 import { Nav } from './Menu.styles'
@@ -7,9 +8,9 @@ const Menu = ({ items }) => (
   <Nav>
     {items.map(item => (
       <li key={item.id}> 
-        <a href={item.link}>
+        <Link to={item.link}>
           {item.name} 
-        </a>
+        </Link>
       </li>
     ))}
   </Nav>
