@@ -7,7 +7,7 @@ const Footer = () => (
   <Wrapper>
     <LinkWrapper>
       <div>Made by </div>
-      <a target="_blank" href="https://www.jackiecalapristi.com"> Jackie Calapristi </a> 
+      <a target="_blank" rel="noopener noreferrer" href="https://www.jackiecalapristi.com"> Jackie Calapristi </a> 
       © {(new Date().getFullYear())} 
     </LinkWrapper>
   </Wrapper>
