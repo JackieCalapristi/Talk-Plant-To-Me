@@ -15,8 +15,7 @@ export const StyledSearchBar = styled.div`
 `
 
 export const StyledSearchBarContent = styled.div`
-  max-width: 1280px;
-  width: 100%;
+  width: calc(100% - 15px);
   height: 55px;
   position: relative;
   color: #000;

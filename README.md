@@ -1,6 +1,6 @@
 # Talk Plant To Me
 Talk Plant To Me is a web app to help everyone learn more about plants & become a better plant parent!
-The idea to create this app originally came from my desire to help my Mom, an avid gardener, learn more about her plants and how better take care of them. 
+The idea to create this app originally came from my desire to help my Mom, an avid gardener, learn more about her plants and how to take better care of them. 
 
 Talk Plant To Me is powered by [The Trefle API](https://trefle.io/)!
 
