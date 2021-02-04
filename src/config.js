@@ -8,7 +8,6 @@ const API_KEY = 'V0FEWm1DcEdlTTBFUUZqTkczVEx5UT09'
 const SEARCH_BASE_URL = `${API_URL}/search?token=${API_KEY}&q=`
 const ALL_PLANTS_BASE_URL = `${API_URL}?token=${API_KEY}`
 
-
 export { 
   API_URL, 
   API_KEY, 
