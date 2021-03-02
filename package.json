@@ -27,9 +27,10 @@
     "node-forge": "^0.10.0",
     "node-notifier": "^8.0.1",
     "react": "^16.13.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.4.3",
     "requestify": "^0.2.5",
     "styled-components": "^5.1.1",
     "websocket-extensions": "^0.1.4"
