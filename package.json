@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.0.0-0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -28,7 +29,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "3.0.1",
     "requestify": "^0.2.5",
     "styled-components": "^5.1.1",
     "websocket-extensions": "^0.1.4"

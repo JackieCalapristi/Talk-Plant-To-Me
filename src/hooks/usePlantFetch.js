@@ -9,9 +9,11 @@ export const usePlantFetch = plantId => {
   const fetchData = useCallback(async () => {
     setError(false)
     setLoading(true)
+    console.log("HELLO")
 
     try {
       const endpoint = `${API_URL}/${plantId}?token=${API_KEY}`
+      console.log('HI', endpoint)
       const result = await (await fetch(endpoint)).json()
 
       setState({
