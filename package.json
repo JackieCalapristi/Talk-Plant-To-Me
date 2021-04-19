@@ -32,6 +32,7 @@
     "react-is": "^16.13.1",
     "react-scripts": "3.4.3",
     "requestify": "^0.2.5",
+    "sockjs": "^0.3.20",
     "ssri": "8.0.1",
     "styled-components": "^5.1.1",
     "websocket-extensions": "^0.1.4"
