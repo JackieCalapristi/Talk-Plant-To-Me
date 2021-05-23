@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  height: 75px;
+  height: 180px;
 
   h5 {
     font-family: proxima-nova,sans-serif;
@@ -17,12 +17,20 @@ export const Wrapper = styled.div`
     letter-spacing: 3px;
   }
 
+  h4 {
+    text-align: center;
+  }
+
   @media screen and (min-width: 768px) {
     display: block;
-    height: 250px;
+    height: 280px;
 
     h5 {
       display: block;
+    }
+
+    h4 {
+      text-align: center;
     }
   }
 `

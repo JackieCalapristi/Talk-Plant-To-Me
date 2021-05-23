@@ -7,7 +7,6 @@ import Welcome from '../Welcome'
 const PlantsHome = () => (
   <div>
     <Welcome />
-    <Grid />
   </div>
 )
 
