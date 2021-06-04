@@ -35,6 +35,7 @@
     "sockjs": "^0.3.20",
     "ssri": "8.0.1",
     "styled-components": "^5.1.1",
+    "testing-library": "0.0.2",
     "websocket-extensions": "^0.1.4"
   },
   "scripts": {
