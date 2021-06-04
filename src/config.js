@@ -1,8 +1,6 @@
-import { API_KEY } from "./_config.js"
-
 // Configuration for the Trefle API
 // Read more about the API here: https://docs.trefle.io/
-
+const API_KEY = 'redacted'
 const API_URL = 'https://cors-anywhere.herokuapp.com/trefle.io/api/v1/species'
 const API_BASE_URL = 'https://cors-anywhere.herokuapp.com/trefle.io'
 
