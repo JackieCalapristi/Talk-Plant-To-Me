@@ -22,7 +22,7 @@ const Welcome = () => (
           <div>The Trefle API</div>
         </a>
     </TrefleApiLinkWrapper>
-    <h4> 🌱 Note: The Trefle API this project relies on has been recently abandoned by the creators. <br
+    <h4> <span role="img" aria-label="leaf emoji">🌱</span> Note: The Trefle API this project relies on has been recently abandoned by the creators. <br
     /> Stay tuned for what comes next for this project! </h4>
   </Wrapper>
 )
